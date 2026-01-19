@@ -51,8 +51,12 @@ def login(email, password):
         'Connection': 'keep-alive'
     }
     data = f'email={email}&password={password}'
+    try:
+        response = requests.post(url=login_url, headers=headers, data=data, allow_redirects=False)
+    except:
+        print("El servidor no está lanzado.")
+        return None, False
 
-    response = requests.post(url=login_url, headers=headers, data=data, allow_redirects=False)
     cookies = response.cookies
     if '/users/consent' not in response.text:
         return None, False
