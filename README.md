@@ -1,4 +1,7 @@
 # LARILIN
+
+<br>"No es bueno delegar tu seguridad a la IA"<br>
+
 LARILIN por yup-ivan
 
 git clone https://github.com/yup-Ivan/LARILIN.git <br>
